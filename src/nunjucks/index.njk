@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Character Sheet</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form id="character-sheet">
+            {% include "_header.njk" %}
+
+            <main>
+                <div id="main-column-1" class="main-column">
+                    {% include "_abilityscores.njk" %}
+
+                    <div class="stat-row">
+                        <div id="character-proficiency-bonus" class="box">
+                            <input name="character-proficiency-bonus" placeholder="+2">
+                            <label for="character-proficiency-bonus">Proficiency Bonus</label>
+                        </div>
+                        <div id="character-inspiration" class="box">
+                            <input name="character-inspiration">
+                            <label for="character-inspiration">Inspiration</label>
+                        </div>
+                        <div id="character-perception" class="box">
+                            <input name="character-perception" placeholder="10">
+                            <label for="character-perception">Passive Perception</label>
+                        </div>
+                    </div>
+
+                    <div id="character-proficiencies-languages" class="box-label">
+                        <textarea name="character-proficiencies-languages" rows="26"></textarea>
+                        <label for="character-proficiencies-languages">Other Proficiencies and Languages</label>
+                    </div>
+                </div>
+
+                <div id="main-column-2" class="main-column">
+                    {% include "_combat.njk" %}
+                </div>
+
+                <div id="main-column-3" class="main-column">
+                    <div id="character-personality" class="box-label">
+                        <textarea name="character-personality" rows="4"></textarea>
+                        <label for="character-personality">Personality</label>
+                    </div>
+                    <div id="character-ideals" class="box-label">
+                        <textarea name="character-ideals" rows="4"></textarea>
+                        <label for="character-ideals">Ideals</label>
+                    </div>
+                    <div id="character-bonds" class="box-label">
+                        <textarea name="character-bonds" rows="4"></textarea>
+                        <label for="character-bonds">Bonds</label>
+                    </div>
+                    <div id="character-flaws" class="box-label">
+                        <textarea name="character-flaws" rows="4"></textarea>
+                        <label for="character-flaws">Flaws</label>
+                    </div>
+                    <div id="character-features" class="box-label">
+                        <textarea name="character-features" rows="32"></textarea>
+                        <label for="character-features">Features &amp; Traits</label>
+                    </div>
+                </div>
+            </main>
+        </form>
+    </body>
+</html>

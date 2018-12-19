@@ -1,0 +1,26 @@
+header {
+    display: grid;
+
+    label {
+        display: block;
+    }
+
+    input {
+        border-bottom: 0.1em solid $color-light-grey;
+    }
+}
+
+#character-name {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+#character-classlevel,
+#character-background,
+#character-playername {
+    grid-row: 1;
+}

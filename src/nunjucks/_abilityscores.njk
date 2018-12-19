@@ -1,0 +1,30 @@
+{% macro ability_score(name, skills) %}
+<div class="ability-score-card">
+    <div class="ability-score box">
+        <input name="character-ability-mod-{{name}}" placeholder="+0">
+        <input name="character-ability-score-{{name}}" placeholder="10">
+        <label for="character-ability-score-{{name}}">{{name}}</label>
+    </div>
+    <div class="saving-throws">
+        <ul>
+            <li>
+                <input type="checkbox" name="saving-throw-{{name}}-proficiency">
+                <input type="text" name="saving-throw-{{name}}" placeholder="+0">
+                <label for="saving-throw-{{name}}">Saving Throws</label>
+            </li>
+
+            {% for skill in skills%}
+                <li>
+                    <input type="checkbox" name="skill-{{skill}}-proficiency">
+                    <input type="text" name="skill-{{skill}}" placeholder="+0">
+                    <label for="skill-{{skill}}">{{skill | replace("-", " ")}}</label>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endmacro %}
+
+{% for ability, skills in abilities %}
+    {{ ability_score(ability, skills) }}
+{% endfor %}

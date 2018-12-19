@@ -1,0 +1,106 @@
+// http://epiclevelgaming.com/wp-content/uploads/2015/01/Alt-pg-front-1160x1502.jpg
+
+@import "variables";
+@import "font";
+@import "header";
+@import "abilityscores";
+@import "combat";
+
+body {
+    margin: 0 auto;
+    margin-bottom: $padding;
+    margin-top: $padding;
+    width: 80%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, percentage(1/3));
+    grid-column-gap: $padding;
+    margin-top: $padding;
+
+    .main-column {
+        display: grid;
+        grid-row-gap: $padding;
+        grid-auto-rows: min-content;
+    }
+}
+
+input {
+    width: 100%;
+    border: none;
+    padding: 0;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 0.625em;
+    height: 0.625em;
+    border: 0.062em solid #000;
+    border-radius: 0.625em;
+
+    &:checked {
+        background-color: #000;
+    }
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 0.7em;
+}
+
+textarea {
+    width: calc(100% - #{$border-radius*2} - 0.125em);
+    background-image: linear-gradient(transparent, transparent 1.5em, $color-light-grey 0);
+    background-size: 100% 1.562em;
+    line-height: 1.562em;
+    font-size: 1em;
+    text-align: left;
+    border: none;
+    padding: $padding;
+    resize: none;
+    overflow: hidden;
+}
+
+.box {
+    border: $border-width solid #000;
+    border-radius: $border-radius;
+    padding: $padding;
+}
+
+
+.stat-row {
+    display: flex;
+    grid-column-gap: $padding;
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100vw;
+    }
+
+    label {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    input {
+        text-align: center;
+        font-size: 2em;
+    }
+}
+
+.box-label {
+    @extend .box;
+
+    label:last-child {
+        font-weight: bold;
+        display: block;
+        text-align: center;
+    }
+}
+
+@import "media";

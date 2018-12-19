@@ -1,0 +1,36 @@
+{
+    "name": "5e-sheet-html",
+    "version": "1.0.0",
+    "description": "5e Characte Sheet in HTML/CSS",
+    "repository": "",
+    "author": "tryton-vanmeer",
+    "license": "MIT",
+    "watch": {
+        "build:html": {
+            "patterns": ["src"],
+            "extensions": "njk"
+        },
+        "build:css": {
+            "patterns": ["src"],
+            "extensions": "scss"
+        }
+    },
+    "scripts": {
+        "clean": "rm -rf build && mkdir build",
+        "build:html": "nunjucks index.njk src/nunjucks/data.json -p src/nunjucks -o build",
+        "build:css": "node-sass src/sass/index.scss -q build/style.css",
+        "build": "npm-run-all --parallel build:*",
+        "watch": "npm-watch",
+        "serve": "cd build/ && live-server",
+        "dev": "npm-run-all --parallel watch serve",
+        "start": "npm-run-all clean build dev"
+    },
+    "devDependencies": {
+        "live-server": "^1.2.1",
+        "node-sass": "^4.10.0",
+        "npm-run-all": "^4.1.5",
+        "npm-watch": "^0.5.0",
+        "nunjucks": "^3.1.4",
+        "nunjucks-cli": "^0.5.1"
+    }
+}

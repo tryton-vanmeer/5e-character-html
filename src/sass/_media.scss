@@ -1,0 +1,38 @@
+@media only screen
+and (min-width: 800px)
+and (max-width: 1400px) {
+    body {
+        width: 100%;
+    }
+
+    main {
+        grid-template-columns: repeat(2, 50%);
+
+        #main-column-3 {
+            grid-column: 1 / span 2;
+            grid-row: 2;
+            grid-template-columns: repeat(2, 50%);
+        }
+    }
+}
+
+@media only screen
+and (min-width : 320px)
+and (max-width : 800px) {
+    body {
+        width: 100%;
+    }
+
+    main {
+        grid-template-columns: 100%;
+    }
+
+    #health-stats {
+        grid-template-columns: 100%;
+    }
+
+    #combat-stats label,
+    #spell-stats label {
+        text-align: center;
+    }
+}

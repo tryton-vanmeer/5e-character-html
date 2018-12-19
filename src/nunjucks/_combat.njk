@@ -1,0 +1,117 @@
+<div id="combat-stats" class="stat-row">
+    <div class="box">
+        <input name="character-armor-class" placeholder="10">
+        <label for="character-armor-class">Armor Class</label>
+    </div>
+    <div class="box">
+        <input name="character-initiative" placeholder="+0">
+        <label for="character-initiative">Initiative</label>
+    </div>
+    <div class="box">
+        <input name="character-speed" placeholder="30">
+        <label for="character-speed">Speed</label>
+    </div>
+</div>
+
+<div id="character-hit-points" class="hit-point box">
+    <div id="character-hit-point-max">
+        <label for="character-hit-point-max">Hit Point Maximum</label>
+        <input name="character-hit-point-max" placeholder="10">
+    </div>
+    <div id="character-current-hit-points">
+        <input name="character-current-hit-points" placeholder="10">
+        <label for="character-current-hit-points">Current Hit Points</label>
+    </div>
+</div>
+
+<div id="health-stats">
+    <div id="character-hit-dice" class="hit-point box">
+        <div id="character-hit-dice-total">
+            <label for="character-hit-dice-total">Total</label>
+            <input name="character-hit-dice-total">
+        </div>
+        <div id="character-current-hit-dice">
+            <input name="character-current-hit-dice">
+            <label for="character-current-hit-dice">Hit Dice</label>
+        </div>
+    </div>
+
+    <div id="character-death-saves" class="box">
+        <div id="death-saves-successes">
+            <label for="death-saves-successes">Successes</label>
+            <div>
+                <input type="checkbox" name="death-saves-successes-1">
+                <input type="checkbox" name="death-saves-successes-2">
+                <input type="checkbox" name="death-saves-successes-3">
+            </div>
+        </div>
+        <div id="death-saves-failures">
+            <label for="death-saves-failures">Failures</label>
+            <div>
+                <input type="checkbox" name="death-saves-failures-1">
+                <input type="checkbox" name="death-saves-failures-2">
+                <input type="checkbox" name="death-saves-failures-3">
+            </div>
+        </div>
+        <label for="character-death-saves">Death Saves</label>
+    </div>
+</div>
+
+<div id="spell-stats" class="stat-row">
+    <div class="box">
+        <input name="character-spellcasting-ability">
+        <label for="character-spellcasting-ability">Spellcasting Ability</label>
+    </div>
+    <div class="box">
+        <input name="character-spell-save" placeholder="10">
+        <label for="character-spell-save">Spell Save DC</label>
+    </div>
+    <div class="box">
+        <input name="character-spell-attack" placeholder="+2">
+        <label for="character-spell-attack">Spell Attack Bonus</label>
+    </div>
+</div>
+
+<div id="character-attacks" class="box-label">
+    <table id="attack-list">
+        <thead>
+            <th>Name</th>
+            <th>Atk Bonus</th>
+            <th>Atk Damage/Type</th>
+        </thead>
+        <tbody>
+            {% for i in range(0,8) %}
+                <tr>
+                    <td><input type="text" name="name-{{i+1}}"></td>
+                    <td><input type="text" name="atk-bonus-{{i+1}}"></td>
+                    <td><input type="text" name="damage-type-{{i+1}}"></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <textarea name="character-attacks-spells" rows="15"></textarea>
+    <label for="character-attacks">Attacks & Spellcasting</label>
+</div>
+
+<div id="character-equipment" class="box-label">
+    <div id="character-currency">
+        <div class="currency">
+            <label for="character-currency-copper">CP</label>
+            <input name="character-currency-copper">
+        </div>
+        <div class="currency">
+            <label for="character-currency-silver">SP</label>
+            <input name="character-currency-silver">
+        </div>
+        <div class="currency">
+            <label for="character-currency-gold">GP</label>
+            <input name="character-currency-gold">
+        </div>
+        <div class="currency">
+            <label for="character-currency-platinum">PP</label>
+            <input name="character-currency-">
+        </div>
+    </div>
+    <textarea name="character-equipment" rows="15"></textarea>
+    <label for="character-equipment">Equipment</label>
+</div>

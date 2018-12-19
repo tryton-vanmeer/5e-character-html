@@ -1,0 +1,76 @@
+.ability-score-card {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-top: $padding;
+
+    .ability-score {
+        display: flex;
+        height: 5em;
+        flex-direction: column;
+        align-items: center;
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            text-align: center;
+        }
+
+        input[name^="character-ability-score"] {
+            font-size: 2em;
+        }
+
+        input[name^="character-ability-mod"] {
+            width: 2.5em;
+            height: 2em;
+            border: $border-width solid #000;
+            border-radius: $border-radius;
+            margin-top: -1.5em;
+        }
+    }
+
+    .saving-throws {
+        border-top: $border-width solid #000;
+        border-top-left-radius: $border-radius;
+
+        ul {
+            padding: 0;
+            margin: 0;
+            margin-top: $padding;
+            margin-left: $padding;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            list-style: none;
+
+            &:first-of-type {
+                input[type="checkbox"] {
+                    border-radius: 0;
+                    transform: rotate(45deg)
+                }
+            }
+
+            input[type="text"] {
+                width: 1.875em;
+                font-size: 0.75em;
+                text-align: center;
+                border-bottom: 0.1em solid #000;
+            }
+
+            input {
+                margin-left: $padding;
+                margin-right: $padding;
+            }
+
+            label {
+                margin-left: $padding;
+                margin-right: $padding;
+                text-align: left;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
