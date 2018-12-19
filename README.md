@@ -19,3 +19,7 @@ Webpage will be in the `build` directory.
 To build and watch the src files for changes, and start a live-reload web server.
 
     `$ yarn start`
+
+### Screenshot
+
+![Screenshot](screenshot.png)
