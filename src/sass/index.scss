@@ -1,5 +1,3 @@
-// http://epiclevelgaming.com/wp-content/uploads/2015/01/Alt-pg-front-1160x1502.jpg
-
 @import "variables";
 @import "font";
 @import "header";
@@ -15,7 +13,7 @@ body {
 
 main {
     display: grid;
-    grid-template-columns: repeat(3, percentage(1/3));
+    grid-template-columns: repeat(3, 33%);
     grid-column-gap: $padding;
     margin-top: $padding;
 
