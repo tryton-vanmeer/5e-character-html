@@ -20,7 +20,6 @@ main {
     .main-column {
         display: grid;
         grid-row-gap: $padding;
-        grid-auto-rows: min-content;
     }
 }
 
