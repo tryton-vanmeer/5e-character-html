@@ -2,6 +2,8 @@
 
 Simple 5e character sheet in HTML/CSS/JS
 
+Try it out at: https://tryton-vanmeer.github.io/5e-character-html/
+
 ### Development setup
 
 Clone or download this repository
